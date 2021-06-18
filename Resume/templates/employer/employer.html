@@ -1,0 +1,50 @@
+{% extends 'Global/templates/global/navigation.html' %}
+
+{% load static %}
+
+{% block content %}
+<!-- Experience Detail Content -->
+<section class='col-md-11 mx-auto d-block py-5 mb-5 shadow-lg'>
+
+    <!-- Experience Detail Header -->
+    <div class='container-fluid text-center'>
+        <img class='m-3 w-50' src='{{ exp.experience_Image.url }}'>
+    </div>
+
+    <!-- Experience Detail Body -->
+    <div class='container py-5 col-md-10'>
+        <h4 class='title mb-0'>{{ exp.experience_Title }}</h4>
+        <small class='annotation'>{{ exp.experience_Duration }}</small>
+        <hr />
+        <p><strong>Description:</strong></p>
+        <p>{{ exp.experience_Summary }}</p>
+        <p><strong>Achievements:</strong><br />
+        <ul>
+            {% for i in exp.ach_as_list %}
+            <li>{{ i }}</li>
+            {% endfor %}
+        </ul>
+        </p>
+        <p><strong>Courses:</strong></p>
+            <ul>
+                <!-- Cycle Through Course list -->
+                {% for c in exp.experience_Courses.all %} 
+                    <li>{{ c.other_Name }}</li>
+                {% endfor %}
+            </ul>
+        <p><strong>Skills:</strong></p>
+            <p>
+                <!-- Cycle Through Skills list -->
+                {% for s in exp.experience_Skills.all %} 
+                    <a href='{% url "skill_details" s.id %}'>{{ s }}</a>&ensp;
+                {% endfor %}
+            </p>
+
+        <div class='small text-muted'>
+            Disclaimer: The organization image(s) and logo(s) are used on this page solely for the purpose of visual identification and representing prior employment of the organization(s). I hold no claims to the intellectual property of the organization(s), nor speak for, represent, or hold business partnerships or relationships with said organization(s).
+        </div>
+
+    </div>
+    
+</section>
+{% endblock content %}

@@ -1,0 +1,99 @@
+{% extends 'global/navigation.html' %}
+
+{% load static %}
+
+{% block content %}
+<!-- Resume -->
+<article class='container py-3'>
+    
+    <section id='Cover'>
+
+        <!-- PROFILE SECTION -->
+        {% comment %} Loops Through Contact Text Objects {% endcomment %}
+        {% for a in resume.pro.all %}
+        <div class='sub' id='Profile'>
+
+            <!-- Heading -->
+            <div class='sub d-block mb-4 mb-md-3' id='Heading'>
+
+                <!-- Name -->
+                <h1>{{ a.profile_Name }}</h1>
+
+                <!-- Phonetic Pronunciation -->
+                <div id='phonetic'>
+                    {{ a.profile_Phonetic }}
+                </div>
+
+            </div>
+
+            <!-- Contact List -->
+            <div class='d-block d-md-inline-flex' id='contactText'>
+
+                {% comment %} Loops Through Contact Objects {% endcomment %}
+                {% for i in a.contact.all %}
+                    
+                    {% comment %} Sets Settings of First Looped Object {% endcomment %}
+                    {% if forloop.first %}
+
+                        <h6 class='mb-0 col-auto'>{{ i.contact_Info }}</h6>&emsp;
+                    
+                    {% comment %} Sets Settings of All Other Looped Object {% endcomment %}
+                    {% else %}
+
+                        <i class='d-sm-inline-block fad fa-ellipsis-h fa-swap-opacity fa-fw'></i>&emsp;<h6 class='col-auto my-0'>{{ i.contact_Info }}</h6>&emsp;
+                        
+                    {% endif %}
+
+                {% endfor %}
+
+            </div>
+
+            <!-- Career Title -->
+            <h6 class='annotation' id='jobTitle'>{{ a.profile_Title|safe }}</h6>
+
+        </div>
+        {% endfor %}
+
+        <!-- LETTER SECTION -->
+        <div class='subsection mb-5' id='Letter'>
+
+            <!-- Employer Name And Address -->
+            <h2 class='mb-0'>{{ resume.app_Employer|safe|linebreaksbr }}</h2>
+            <p class='annotation text-justify'>{{ resume.app_Employer_Address|safe|linebreaksbr }}</p>
+
+            <!-- Subject / Job Role -->
+            <h6 class=''>RE: {{ resume.app_Job_Title|safe }} {% comment %} Populate Job Title {% endcomment %}
+                {% if resume.app_Job_Number %} {% comment %} Checks If Job Number Exists {% endcomment %}
+                    - {{ resume.app_Job_Number }}</h6> {% comment %} If Exists, Appends, Closes Paragraph {% endcomment %}
+                {% else %} {% comment %} If Does Not Exist {% endcomment %}
+                    </h6> {% comment %} Closes Paragraph {% endcomment %}
+                {% endif %}
+
+            <!-- Cover Letter -->
+            <div id='covBody'>
+
+                <p>To Whom it May Concern,</p>
+
+                {% comment %} Cover Letter Body Content {% endcomment %}
+                {{ resume.app_Cover.letter_body|safe|linebreaksbr }}
+                
+            </div>
+
+        </div>
+
+        <!-- SIGNATURE SECTION -->
+        <div class='subsection clearfix' id='Letter'>
+
+            <div class='closing'>
+
+                <img class='signature d-inline-flex' src='{% static 'resume/images/mysignaturedark.png' %}' alt='My image'>
+                <p class='mb-0'>Regards,</p><h5>Eoghan Hulbert</h5>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</article>
+{% endblock content %}

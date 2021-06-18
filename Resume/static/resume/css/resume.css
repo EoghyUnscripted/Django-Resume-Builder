@@ -1,0 +1,388 @@
+@media screen {
+    
+    /* Navigation Bar Settings On Screen */
+    nav {
+        background-color: #333333;            /* Sets Background Color */
+    }
+
+    /* Body Settings On Screen */
+    body {
+        font-family: 'Lato', sans-serif;            /*  Sets Font Family */
+        font-size: 12pt;                            /* Sets Font Size */
+    }
+
+    body body p, ul {
+        line-height: 1.8;               /* Sets Line Height */
+    }
+
+    /* Header Settings On Screen */
+    h1 {
+        font-size: 4em;                                         /* Sets Font Size */
+        text-transform: uppercase;                              /* Sets Text to Uppercase */
+        color: #5A0500;                                       /* Sets Font Color */
+        font-family: 'Montserrat', sans-serif;                  /* Sets Font Family */
+        font-weight: 500;                                       /* Sets Font Weight */
+        text-shadow: 3px 5px 6px rgb(0 0 0 / 0.4);              /* Sets Text Shadow */
+    }
+
+    h2 {
+        text-transform: uppercase;                  /* Sets Text to Uppercase */
+        color: #5A0500;                           /* Sets Font Color */
+        font-family: 'Vollkorn', serif;             /* Sets Font Family */
+        font-weight: 700;                           /* Sets Font Weight */
+    }
+
+    h3 {
+        text-transform: uppercase;                  /* Sets Text to Uppercase */
+        color: #5A0500;                           /* Sets Font Color */
+        font-family: 'Vollkorn', serif;             /* Sets Font Family */
+        font-weight: 700;                           /* Sets Font Weight */
+    }
+
+    h4 {
+        border-top: #FFFFFF;                                /* Sets Border Top Line Color */
+        border-bottom: #EEE;                                /* Sets Border Bottom Line Color */
+        border-left: #FFFFFF;                               /* Sets Border Left Line Color */
+        border-right: #FFFFFF;                              /* Sets Border Right Line Color */
+        border-style: solid;                                  /* Sets Border Style */
+        border-width: thin;                                   /* Sets Border Line Thickness */
+        text-transform: uppercase;                            /* Sets Text to Uppercase */
+        color: #5A0500;                                     /* Sets Font Color */
+        font-family: 'Vollkorn', serif;                       /* Sets Font Family */
+        font-weight: 700;                                     /* Sets Font Weight */
+        text-shadow: 3px 5px 6px rgb(0 0 0 / 0.2);            /* Sets Text Shadow */
+    }
+
+    h5 {
+        color: #5A0500;                                 /* Sets Font Color */
+        font-family: 'Montserrat', sans-serif;            /* Sets Font Family */
+        font-weight: 600;                                 /* Sets Font Weight */
+    }
+
+    h6 {
+        text-transform: capitalize;                       /* Sets Text to Capitalize */
+        font-family: 'Montserrat', sans-serif;            /* Sets Font Family */
+        font-weight: 600;                                 /* Sets Font Weight */
+    }
+
+    /* Link/URL Settings On Screen */
+    a {
+        color: #5A0500;                   /* Sets Link Color */
+        font-weight: 450;                   /* Body Settings On Screen */
+    }
+
+    a:hover {
+        color: #6c757d;                   /* Sets Link Color */
+        font-weight: 450;                   /* Body Settings On Screen */
+        text-decoration: none;              /* Removes Underline */
+    }
+
+    /* Footer Settings On Screen */
+    footer .inner {
+        text-align: center;             /* Centers Text */
+    }
+
+    svg {
+        filter: drop-shadow(3px 3px 2px rgb(0 0 0 / 0.4));              /* Adds Shadowing to SVG Icons FontAwesome */
+    }
+
+    /* Class Formatting On Screen */
+    .annotation {
+        font-size: 12pt;                        /* Sets font size */
+        color: #6c757d;                       /* Sets Color */
+        text-transform: uppercase;              /* Sets Uppercase Text */
+    }
+
+    .closing, 
+    .signature {
+        float: right;               /* Sets Float to Right */
+        clear: right;               /* Sets Clear Fix on Right */
+    }
+
+    .signature {
+        opacity: 80%;               /* Sets Opacity of Image */
+        z-index: -1;                /* Sets Index To Back */
+        width: 200px;               /* Sets Width of Image */
+        height: auto;               /* Sets Height of Image */
+    }
+
+    .red {
+        color: #5A0500;
+    }
+
+    .subsection {
+        margin-top: 20px;                   /* Sets Margin Top */
+        margin-bottom: 20px;                /* Sets Margin Bottom */
+    }
+
+    /* ID Formatting On Screen */
+    #Profile {
+        text-align: center;                 /* Centers Text */
+    }
+
+    #phonetic {
+        font-size: 1rem;                                /* Sets Font Size */
+        font-family: 'Vollkorn', serif;                 /* Sets Font Family */
+        font-weight: 500;                               /* Sets Font Weight */
+        margin: -10px;                                  /* Sets Margin */
+        color: #6c757d;                               /* Sets Text Color */
+    }
+
+    #contactText {
+        display: inline-flex;                   /* Displays Element */
+        font-weight: 500;                       /* Sets Font Weight */
+        padding-bottom: 15px;                   /* Sets Padding Bottom */
+        margin: -10px;                          /* Sets Margin */
+    }
+
+    #contactText h6 {
+        text-transform: none;                   /* Overrides Prior Text-Transform */
+    }
+
+    #jobTitle {
+        border-bottom: #EEEEEE;              /* Sets Border Bottom Line Color */
+        border-top: #EEEEEE;                 /* Sets Border Top Line Color */
+        border-left: #FFFFFF;                /* Sets Border Left Line Color */
+        border-right: #FFFFFF;               /* Sets Border Right Line Color */
+        border-style: solid;                   /* Sets Border Style */
+        border-width: thin;                    /* Sets Border Line Thickness */
+        margin-top: 10px;                      /* Sets Margin Top */
+        padding-top: 10px;                     /* Sets Padding Top */
+        padding-bottom: 10px;                  /* Sets Padding Bottom */
+        text-align: center;                    /* Centers Text */
+    }
+
+    #objBody {
+        margin-top: 10px;                   /* Sets Margin Top */
+        margin-bottom: 15px;                /* Sets Margin Bottom */
+        text-align: justify;                /* Justifies Text */
+    }
+
+    #empJobBody,
+    #prevJobBody {
+        text-align: justify;                /* Justifies Text */
+        width: 100%;                        /* Sets Width */
+        padding-right: 15px;                /* Sets Padding Right */
+        padding-left: 15px;                 /* Sets Padding Left */
+        margin-right: auto;                 /* Sets Margin Right */
+        margin-left: auto;                  /* Sets Margin Left */
+    }
+
+    #empJobBody,
+    #prevJobBody {
+        text-align: justify;            /* Justifies Text */
+    }
+
+    #Employment img {
+        max-width: 200px;               /* Sets Max Width of Image */
+        float: right;                   /* Sets Image to Float Right */
+    }
+
+    #Education img {
+        max-width: 30%;                 /* Sets Max Width of Image */ 
+        float: right;                   /* Sets Image to Float Right */
+    }
+
+    #eduUniBody {
+        text-align: justify;                /* Justifies Text */
+        width: 100%;                        /* Sets Width */
+        padding-right: 15px;                /* Sets Padding Right */
+        padding-left: 15px;                 /* Sets Padding Left */
+        margin-right: auto;                 /* Sets Margin Right */
+        margin-left: auto;                  /* Sets Margin Left */
+    }
+
+    #indIcons {
+        color: #6c757d;                 /* Sets Font Color */
+    }
+
+}
+
+@media print {
+
+    @page {
+        size: auto;                  /* Sets Page Dimensions For Print */
+    }
+
+    /* Body Settings For Print */
+    body {
+        font-family: 'Lato', sans-serif;                /*  Sets Font Family */
+        font-size: 12pt;                                /* Sets Font Size */
+    }
+
+    body body p, ul {
+        line-height: 1.8;               /* Sets Line Height */
+    }
+
+    /* Header Settings For Print */
+    h1 {
+        font-size: 3rem;                                    /* Sets Font Size */
+        text-transform: uppercase;                          /* Sets Text to Uppercase */
+        color: #5A0500;                                   /* Sets Font Color */
+        font-family: 'Montserrat', sans-serif;              /* Sets Font Family */
+        font-weight: 500;                                   /* Sets Font Weight */
+    }
+
+    h2 {
+        text-transform: uppercase;                       /* Sets Text to Uppercase */
+        color: #5A0500;                                /* Sets Font Color */
+        font-family: 'Vollkorn', serif;                  /* Sets Font Family */
+        font-weight: 700;                                /* Sets Font Weight */
+    }
+
+    h3 {
+        text-transform: uppercase;                    /* Sets Text to Uppercase */
+        color: #5A0500;                             /* Sets Font Color */
+        font-family: 'Vollkorn', serif;               /* Sets Font Family */
+        font-weight: 700;                             /* Sets Font Weight */
+    }
+
+    h4 {
+        border-top: #FFFFFF;                           /* Sets Border Top Line Color */
+        border-bottom: #EEE;                           /* Sets Border Bottom Line Color */
+        border-left: #FFFFFF;                          /* Sets Border Left Line Color */
+        border-right: #FFFFFF;                         /* Sets Border Right Line Color */
+        border-style: solid;                             /* Sets Border Style */
+        border-width: thin;                              /* Sets Border Line Thickness */
+        line-height: 2em;                                /* Sets Text Line Height */
+        text-transform: uppercase;                       /* Sets Text to Uppercase */
+        color: #5A0500;                                /* Sets Font Color */
+        font-family: 'Vollkorn', serif;                  /* Sets Font Family */
+        font-weight: 700;                                /* Sets Font Weight */
+    }
+
+    h5 {
+        color: #5A0500;                                    /* Sets Font Color */
+        font-family: 'Montserrat', sans-serif;               /* Sets Font Family */
+        font-weight: 600;                                    /* Sets Font Weight */
+    }
+
+    h6 {
+        text-transform: capitalize;                          /* Sets Text to Capitalize */
+        font-family: 'Montserrat', sans-serif;               /* Sets Font Family */
+        font-weight: 600;                                    /* Sets Font Weight */
+    }
+
+    /* Link/URL Settings For Print */
+    a,
+    a:link {
+        color: #5A0500;                   /* Sets Link Color */
+        font-weight: 450;                   /* Body Settings On Screen */
+        text-decoration: none;              /* Removes Underline */
+    }
+
+    /* Image Settings For Print */
+    img {
+        display: none;             /* Hides Images */
+    }
+
+    footer {
+        display: none;             /* Hides Element */
+    }
+
+    svg {
+        filter: drop-shadow(3px 3px 2px rgb(0 0 0 / 0.4));                    /* Sets Shadowing on SVG Icons FontAwesome */
+    }
+    
+    /* Class Settings For Print */
+    .annotation {
+        font-size: 12pt;                        /* Sets Font Size */
+        color: #6c757d;                       /* Sets Color */
+        text-transform: uppercase;              /* Sets Uppercase Text */
+    }
+    
+    .divider {
+        border-color: #464646;                /* Sets Line Color of Border */
+    }
+
+    .contacts h6 {
+        text-transform: inherit;                /* Removes Prior Text-Transform Settings  */
+    }
+
+    .closing, 
+    .signature {
+        float: right;               /* Sets Float to Right */
+        clear: right;               /* Sets Clear Fix on Right */
+    }
+
+    .signature {
+        display: inline-flex;               /* Sets Display Inline With Elements */
+        opacity: 80%;                       /* Sets Opacity of Image */
+        z-index: -1;                        /* Sets Index To Back */
+        width: 200px;                       /* Sets Width of Image */
+        height: auto;                       /* Sets Height of Image */
+    }
+
+    .red {
+        color: #5A0500;
+    }
+
+    .subsection {
+        margin-top: 20px;                  /* Sets Margin Top */
+        margin-bottom: 20px;               /* Sets Margin Bottom */
+    }
+
+    /* ID Settings For Print */
+    #Profile {
+        text-align: center;                 /* Centers Text */
+    }
+    
+    #phonetic {
+        font-size: 1rem;                              /* Sets Font Size */
+        font-family: 'Vollkorn', serif;               /* Sets Font Family */
+        font-weight: 500;                             /* Sets Font Weight */
+        margin: -10px;                                /* Sets Margin */
+        color: #6c757d;                             /* Sets Color */
+    }
+    
+    #contactText {
+        display: inline-flex;               /* Displays Inline With Other Elements */
+        font-weight: 500;                   /* Sets Font Weight */
+        padding-bottom: 15px;               /* Sets Padding Bottom */
+    }
+
+    #contactText h6 {
+        text-transform: none;               /* Overrides Prior Text-Transform */
+    }
+
+    #jobTitle {
+        border-bottom: #EEEEEE;               /* Sets Border Bottom Line Color */
+        border-top: #EEEEEE;                  /* Sets Border Top Line Color */
+        border-left: #FFFFFF;                 /* Sets Border Left Line Color */
+        border-right: #FFFFFF;                /* Sets Border Right Line Color */
+        border-style: solid;                    /* Sets Border Style */
+        border-width: thin;                     /* Sets Border Line Thickness */
+        padding-top: 10px;                      /* Sets Padding Top */
+        padding-bottom: 10px;                   /* Sets Padding Bottom */
+        text-align: center;                     /* Centers Text */
+    }
+
+    #objBody {
+        margin-top: 10px;               /* Sets Margin Top */
+        margin-bottom: 15px;            /* Sets Margin Bottom */
+        text-align: justify;            /* Justifies Text */
+    }
+
+    #empJobHeader,
+    #prevJobHeader {
+        text-align: center;             /* Centers Text */
+    }
+
+    #empJobBody,
+    #prevJobBody {
+        text-align: justify;            /* Justifies Text */
+    }
+
+    #eduUniHeader {
+        text-align: center;             /* Centers Text */
+    }
+
+    #indIcons {
+        color: #6c757d;              /* Sets Icon Color */
+    }
+
+    #refDetails {
+        display: block;                /* Displays Element */
+    }
+
+}

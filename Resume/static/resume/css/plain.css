@@ -1,0 +1,256 @@
+@media screen {
+    
+    /* Navigation Bar Settings On Screen */
+    nav {
+        background-color: #333333;      /* Sets Background Color */
+    }
+
+    /* Body Settings On Screen */
+    body {
+        font-family: 'Lato', sans-serif;        /*  Sets Font Family */
+        font-size: 12pt;                        /* Sets Font Size */
+    }
+
+    body body p, ul {
+        line-height: 1.8;       /* Sets Line Height */
+    }
+
+    /* Header Settings On Screen */
+    h1 {
+        font-size: 4rem;                            /* Sets Font Size */
+        text-transform: uppercase;                  /* Sets Text to Uppercase */
+        font-weight: 500;                           /* Sets Font Weight */
+    }
+
+    h2 {
+        text-transform: uppercase;          /* Sets Text to Uppercase */
+        font-weight: 700;                   /* Sets Font Weight */
+    }
+
+    h3 {
+        text-transform: uppercase;          /* Sets Text to Uppercase */
+        font-weight: 700;                   /* Sets Font Weight */
+    }
+
+    h4 {
+        line-height: 2em;
+        text-transform: uppercase;          /* Sets Text to Uppercase */
+        font-weight: 700;                   /* Sets Font Weight */
+    }
+
+    h5 {
+        font-weight: 600;                           /* Sets Font Weight */
+    }
+
+    h6 {
+        text-transform: capitalize;                 /* Sets Text to Capitalize */
+        font-weight: 600;                           /* Sets Font Weight */
+    }
+
+    /* Link/URL Settings On Screen */
+    a {
+        color: #000000;     /* Sets Link Color */
+        font-weight: 450;     /* Body Settings On Screen */
+    }
+
+    a:hover {
+        color: #000000;           /* Sets Link Color */
+        font-weight: 450;           /* Body Settings On Screen */
+        text-decoration: none;      /* Removes Underline */
+    }
+
+    /* Footer Settings On Screen */
+    footer .inner {
+        text-align: center;     /* Centers Text */
+    }
+
+    /* Class Formatting On Screen */
+    .annotation {
+        font-size: 12pt;
+        text-transform: uppercase;      /* Sets Uppercase Text */
+    }
+
+    .divider {
+        border-color: #464646;      /* Sets Line Color of Border */
+    }
+
+    .contacts {
+        display: inline-flex;
+    }
+
+    .contacts h6 {
+        text-transform: inherit;
+    }
+
+    /* ID Formatting On Screen */
+    #Profile {
+        text-align: center;
+    }
+
+    #objBody {
+        text-align: justify;    /* Justifies Text */
+    }
+    
+    #contactText {
+        display: block;          /* Prevents Rendering */
+    }
+
+    #empJobBody {
+        text-align: justify;    /* Justifies Text */
+    }
+
+    #eduUniBody {
+        text-align: justify;    /* Justifies Text */
+    }
+
+    #indIcons {
+        display: none;
+        visibility: collapse;
+    }
+
+    #refDetails {
+        display: none;          /* Prevents Rendering */
+        visibility: hidden;     /* Hides Element */
+    }
+
+    #hobIcons {
+        display: none;          /* Prevents Rendering */
+        visibility: hidden;     /* Hides Element */
+    }
+
+}
+
+@media print {
+
+    @page {
+        size: 8.5, 11;      /* Sets Page Dimensions For Print */
+        margin: 96px;       /* Sets Margin For Print */
+    }
+
+    /* Body Settings For Print */
+    body {
+        font-family: 'Lato', sans-serif;        /*  Sets Font Family */
+        font-size: 12pt;                        /* Sets Font Size */
+    }
+
+    body body p, ul {
+        line-height: 1.8;       /* Sets Line Height */
+    }
+
+    /* Header Settings For Print */
+    h1 {
+        font-size: 4rem;                            /* Sets Font Size */
+        font-weight: 500;                           /* Sets Font Weight */
+    }
+
+    h2 {
+        text-transform: uppercase;          /* Sets Text to Uppercase */
+        font-weight: 700;                   /* Sets Font Weight */
+    }
+
+    h3 {
+        text-transform: uppercase;          /* Sets Text to Uppercase */
+        font-weight: 700;                   /* Sets Font Weight */
+    }
+
+    h4 {
+        border-top: #FFFFFF;
+        border-bottom: #F2F2F2;
+        border-left: #FFFFFF;
+        border-right: #FFFFFF;
+        border-style: solid;
+        border-width: thin;
+        line-height: 2em;
+        text-transform: uppercase;          /* Sets Text to Uppercase */
+        font-weight: 700;                   /* Sets Font Weight */
+    }
+
+    h5 {
+        font-weight: 600;                           /* Sets Font Weight */
+    }
+
+    h6 {
+        text-transform: capitalize;                 /* Sets Text to Capitalize */
+        font-weight: 600;                           /* Sets Font Weight */
+    }
+
+    /* Link/URL Settings */
+    a,
+    a:link {
+        color: #000000;           /* Sets Link Color */
+        font-weight: 450;           /* Body Settings On Screen */
+        text-decoration: none;      /* Removes Underline */
+    }
+
+    footer {
+        display: none;
+    }
+    
+    /* Class Settings */
+    .annotation {
+        font-size: 12pt;
+        text-transform: uppercase;      /* Sets Uppercase Text */
+    }
+
+    .contacts {
+        display: inline-flex;
+    }
+
+    .contacts h6 {
+        text-transform: inherit;
+    }
+
+    .closing, 
+    .signature {
+        float: right;
+        clear: right;
+    }
+
+    .signature {
+        display: inline-flex;
+        opacity: 80%;
+        z-index: -1;
+        width: 200px;
+        height: auto;
+    }
+
+    /* ID Settings On Screen */
+    #Profile {
+        text-align: center;     /* Centers Text */
+    }
+
+    #objBody {
+        text-align: justify;    /* Justifies Text */
+    }
+
+    #contactText {
+        display: block;     /* Displays Element */
+        font-weight: 500;
+    }
+
+    #empJobHeader {
+        text-align: center;     /* Centers Text */
+    }
+
+    #empJobBody {
+        text-align: justify;    /* Justifies Text */
+    }
+
+    #eduUniHeader {
+        text-align: center;     /* Centers Text */
+    }
+
+    #indIcons {
+        display: none;
+        visibility: collapse;
+    }
+
+    #refDetails {
+        display: block;     /* Displays Element */
+    }
+
+    #hobIcons {
+        display: none;          /* Prevents Rendering */
+        visibility: hidden;     /* Hides Element */
+    }
+}
