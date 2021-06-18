@@ -96,9 +96,9 @@ primary purpose.
 6) Optional: Add the skills related directly to the job role you are applying for -- if you are a developer
              you can add your technical skills. Otherwise, you can leave emppty or continue to list the rest
              of your skills related to the job role
-
-             NOTE: If you do not link the skills to a set category, they will not display on the resume
-                   You can set a category with the title of "General" or add a fontawesome icon in it's place
+    
+    NOTE: If you do not link the skills to a set category, they will not display on the resume
+          You can set a category with the title of "General" or add a fontawesome icon in it's place
 
 7) Optional: Add employment to your resume -- This section is optional, but should include some form of
              activity, such as professional employment, volunteer work, work study, self-employment, 
