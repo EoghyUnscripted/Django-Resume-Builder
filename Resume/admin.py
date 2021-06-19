@@ -57,7 +57,7 @@ class UniversitiesAdmin(admin.ModelAdmin):
 # Independent
 @admin.register(course)
 class CoursesAdmin(admin.ModelAdmin):
-    list_display = ('id', 'status', 'course_Date', 'course_Name', 'course_Description')
+    list_display = ('id', 'reference', 'status', 'course_Date', 'course_Name', 'course_Description')
     list_filter = ['id', 'course_Date', 'course_Name']
     list_editable = ['course_Date', 'course_Name', 'course_Description']
 
@@ -71,7 +71,7 @@ class AwardsAdmin(admin.ModelAdmin):
 # Links
 @admin.register(link)
 class LinksAdmin(admin.ModelAdmin):
-    list_display = ('id', 'link_Name', 'link_URL', 'link_Comment')
+    list_display = ('id', 'reference', 'link_Name', 'link_URL', 'link_Comment')
     list_filter = ['id', 'link_Name']
     list_editable = ['link_Name', 'link_URL', 'link_Comment']
 
@@ -89,6 +89,6 @@ class AppCommentsAdmin(admin.ModelAdmin):
 
 @admin.register(cover_Letter)
 class CoverLettersAdmin(admin.ModelAdmin):
-    list_display = ('id', 'cover_Title')
+    list_display = ('id', 'reference', 'cover_Title')
     list_filter = ['id', 'cover_Title']
     list_editable = ['cover_Title']

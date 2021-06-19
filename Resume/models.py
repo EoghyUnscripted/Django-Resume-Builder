@@ -195,6 +195,13 @@ class job(models.Model):
         label = self.job_App_Ref.app_Title
         return label
 
+    def job_Status(self):
+        if self.job_Current == '1':
+            return True
+        if self.job_Current == '0': 
+            return False
+        
+
 # Education
 class university(models.Model):
     uni_Image = models.ImageField('Crest', upload_to='images/', blank=True, null=True)
