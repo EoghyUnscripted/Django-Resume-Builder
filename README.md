@@ -96,9 +96,9 @@ primary purpose.
 6) Optional: Add the skills related directly to the job role you are applying for -- if you are a developer
              you can add your technical skills. Otherwise, you can leave emppty or continue to list the rest
              of your skills related to the job role
-
-             NOTE: If you do not link the skills to a set category, they will not display on the resume
-                   You can set a category with the title of "General" or add a fontawesome icon in it's place
+    
+    NOTE: If you do not link the skills to a set category, they will not display on the resume
+          You can set a category with the title of "General" or add a fontawesome icon in it's place
 
 7) Optional: Add employment to your resume -- This section is optional, but should include some form of
              activity, such as professional employment, volunteer work, work study, self-employment, 
@@ -126,7 +126,7 @@ Thank you, again for checking out my work. If you have questions, concerns, or s
 
 v2.0
 
-Version 2.0 is coming soon and will include additional elements such as a new resume format, possible color
+Version 2.0 is coming soon and will include additional elements such as a new resume format, possible color 
 options for text design, and potentially a more modern design option.
 
 With this version I plan to attempt to create a "Resume" object model with a Title field so that users
@@ -138,5 +138,5 @@ automatically link the elements to their respective resume and cover letters wit
 not become a viable option, depending on how the GUI needs to function for the users.
 
 Ideally, the GUI will make the steps above more self-explanatory to users so that the general,
-non-technical individual can figure out how to build their resume and cover letters without needing
-to go through the django-admin portal.
+non-technical individual can figure out how to build their resume and cover letters without needing to go 
+through the django-admin portal.
