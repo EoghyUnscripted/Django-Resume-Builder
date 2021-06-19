@@ -118,4 +118,25 @@ primary purpose.
 11) Optional: Lastly, add add your reference links -- This section is optional, but can include social links,
               Github repository, portfolio links, etc
 
+12) Optional: Once the Resume is completed, you can create a resume -- This section is optional and depends
+              on you if you want to add a cover letter for the resume. If you do, you need to link the cover
+              letter to the resume, and also set the cover letter in the Resume object to link
+
 Thank you, again for checking out my work. If you have questions, concerns, or suggestions, please reach out to me!
+
+v2.0
+
+Version 2.0 is coming soon and will include additional elements such as a new resume format, possible color
+options for text design, and potentially a more modern design option.
+
+With this version I plan to attempt to create a "Resume" object model with a Title field so that users
+can use this as the reference object for the resume elements (Name, profile, employement, etc). I will then
+add both the resume and cover letter references to the "Application" object.
+
+This change will help to reduce confusion in the hierarchy and allow me to develop a front-end that will
+automatically link the elements to their respective resume and cover letters without user input. This may
+not become a viable option, depending on how the GUI needs to function for the users.
+
+Ideally, the GUI will make the steps above more self-explanatory to users so that the general,
+non-technical individual can figure out how to build their resume and cover letters without needing
+to go through the django-admin portal.
