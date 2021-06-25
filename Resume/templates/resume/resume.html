@@ -6,354 +6,232 @@
 <!-- Resume -->
 <article class='container py-3'>
     
-    <section id='resume'>
+    <section class='row bg-light' id='resume'>
 
-        <!-- PROFILE SECTION -->
-        {% comment %} Loops Through Contact Text Objects {% endcomment %}
-        {% for a in resume.pro.all %}
-        <div class='sub' id='Profile'>
+            <div class='container-fluid col-12' id='topPanel'>
 
-            <!-- Heading -->
-            <div class='sub d-block mb-4 mb-md-3' id='Heading'>
+                <!-- PROFILE SECTION -->
+                <div class='subsection' id='Profile'>
 
-                <!-- Name -->
-                <h1>{{ a.profile_Name }}</h1>
+                    {% comment %} Loops Through Contact Text Objects {% endcomment %}
+                    {% for a in resume.pro.all %}
 
-                <!-- Phonetic Pronunciation -->
-                <div id='phonetic'>
-                    {{ a.profile_Phonetic }}
-                </div>
+                         <!-- Heading -->
+                        <div id='Heading'>
 
-            </div>
+                            <!-- Contact List -->
+                            <div id='contactText'>
 
-            <!-- Contact List -->
-            <div class='' id='contactText'>
+                                {% comment %} Loops Through Contact Objects {% endcomment %}
+                                {% for i in a.contact.all %}
 
-                {% comment %} Loops Through Contact Objects {% endcomment %}
-                {% for i in a.contact.all %}
-                    
-                    {% comment %} Sets Settings of First Looped Object {% endcomment %}
-                    {% if forloop.first %}
+                                    <span class='d-block mb-0'>{{ i.contact_Info|safe }}</span>
 
-                        <h6 class='mb-0 col-auto'>{{ i.contact_Info }}</h6>&emsp;
-                    
-                    {% comment %} Sets Settings of All Other Looped Object {% endcomment %}
-                    {% else %}
+                                {% endfor %}
 
-                        <i class='d-sm-inline-block fad fa-ellipsis-h fa-swap-opacity fa-fw'></i>&emsp;<h6 class='col-auto my-0'>{{ i.contact_Info }}</h6>&emsp;
+                            </div>
+
+                            <!-- Name -->
+                            <h1>{{ a.profile_Name }}</h1>
+
+                            <!-- Career Title -->
+                            <div id='jobName'>
+                                <h5 class='annotation' id='jobLabel'>{{ a.profile_Title|safe }}</h5>
+                            </div>
+
+                        </div>
+
+                        <div class='' id='objBody'>
+
+                            {% comment %} Loops Through Objective Objects {% endcomment %}
+                            {% for o in a.obj.all %}
+                                    
+                                <!-- Profile Objective -->
+                                <p id='objText'>{{ o.objective_Summary }}</p>
+
+                            {% endfor %}
                         
-                    {% endif %}
+                        </div>
 
-                {% endfor %}
-
-            </div>
-
-            <!-- Career Title -->
-            <h6 class='annotation' id='jobTitle'>{{ a.profile_Title|safe }}</h6>
-            
-            {% comment %} Loops Through Objective Objects {% endcomment %}
-            {% for o in a.obj.all %}
-                    
-                    <!-- Profile Objective -->
-                    <div id='objBody'>{{ o.objective_Summary }}</div>
-
-            {% endfor %}
-
-        </div>
-        {% endfor %}
-
-        <!-- CORES SECTION -->
-        {% if resume.core.exists %} {% comment %} Check If Core Skills List Exists {% endcomment %}
-        <div class='subsection' id='Cores'>
-
-            <!-- Core Skills Header -->
-            <h4 id='coreHeader'>Core Skills</h4>
-
-            <!-- Core Skills -->
-            {% for s in resume.core.all %}
-            <div class='col d-flex' id='{{ s.core_Name }}'>
-                
-                <strong class=''>{{ s.core_Name }}</strong>
-                <span class='d-lg-block d-lg-inline-flex mx-3 mt-1'><i class='fad fa-long-arrow-right fa-fw'></i></span>
-                <span class='d-block d-inline-flex'>{{ s.core_Description }}</span>
-
-            </div>
-            {% endfor %}
-
-        </div>
-        {% endif %}
-
-        <!-- RELEVANT SKILLS SECTION -->
-        {% if resume.cat.exists %} 
-        {% comment %} Checks If Any Skill Lists Exist {% endcomment %}
-        <div class='subsection' id='Skills'>
-
-            <!-- Relevant Skills Header -->
-            <h4>Relevant Skills</h4>
-            
-            <!-- Relevant Skills Body -->
-            <div class='row my-3' id='relBody'>
-
-                <!-- Relevant Skills -->
-                {% for c in resume.cat.all %} {% comment %} Check If Skill List Exists {% endcomment %}
-                <div class='col' id='{{ c.category_Name }}'>
-
-                <div class='my-2'>
-                    <h6>{{ c.category_Name }}</h6>
-
-                    {% comment %} Loops and Displays Selected Skill Names {% endcomment %}
-                    {% for s in c.skill.all %}
-                    <span class='my-0'>                      
-                        {% comment %} Checks If Last Looped Object {% endcomment %}
-                        {% if not forloop.last %}
-                                                            
-                            {% comment %} If Not Last Looped Object {% endcomment %}
-                            {{ s.skill_Name }},&ensp; {% comment %} Adds Space After Each {% endcomment %}
-                                                        
-                        {% endif%}
-                                                        
-                        {% comment %} If Last Looped Object {% endcomment %}
-                        {% if forloop.last %}
-
-                            {% comment %} Removes Space and Comma After Each {% endcomment %}       
-                            {{ s.skill_Name }}
-
-                        {% endif%}
-                    </span>
                     {% endfor %}
 
                 </div>
-                </div>
-                {% endfor %}
+
+                <hr />
 
             </div>
 
-        </div>
-        {% endif %}
+            <div class='col-12 col-md-3' id='leftPanel'>
 
-        <!-- WORK EXPERIENCE SECTION -->
-        {% if resume.job.exists %}
-        <div class='subsection' id='Employment'>
+                <!-- EDUCATION SECTION -->
+                <div class='subsection' id='Education'>
 
-            <!-- Work Experience Header -->    
-            <h4 id='empHeader'>Work Experience</h4>
+                    {% comment %} Checks If Education List Exists {% endcomment %}
+                    {% if resume.uni.exists %}
 
+                        <!-- Education Header -->
+                        <h4 id='eduHeader'>Education</h4>
 
-            {% comment %} Loops And Displays Selected Experience Objects {% endcomment %}
-            {% for e in resume.job.all %}
+                        {% comment %} Loops And Displays Selected Objects {% endcomment %}
+                        <!-- Education Body -->
+                        {% for u in resume.uni.all %}
 
-                <!-- Recent Experience Body -->
-                {% if e.job_Image.url is not Null %}
+                            <div id='eduUniHeader'>
 
-                    <img class='d-none d-md-block d-print-none' src='{{ e.job_Image.url }}' alt='{{ e.job_Employer }}' /> <!-- Recent Employer Logo -->
-                        
-                {% endif %}
+                                <!-- Degree Program Name -->
+                                <h5 class='mb-0'>{{ u.uni_Degree }}</h5>
 
-                <div class='clearfix mt-3' id='empJobHeader'>
+                                <!-- University Name -->
+                                <p class='mb-0'>{{ u.uni_Name }}</p>
 
-                    <!-- Job Title -->
-                    <h5 class='text-truncate mb-0'>{{ e.job_Title }}</h5>
-                                
-                    <!-- Job Dates -->
-                    <i class='fad fa-calendar fa-fw'></i>&ensp;<span class='annotation'>{{ e.job_Duration }}</span>&ensp;
+                                <!-- University Dates -->
+                                <small class='text-muted'><i class='fad fa-calendar fa-fw'></i>&ensp;{{ u.uni_Duration }}</small>
 
-                    <!-- Job Location -->
-                    <i class='fad fa-map-marker-alt fa-fw'></i>&ensp;<span class='annotation'>{{ e.job_Location }}</span>
-
-                    <!-- Employer Name -->
-                    <h6>{{ e.job_Employer }}</h6>
-
-                </div>
-
-                <div class='mb-4' id='empJobBody'>
-
-                    <!-- Job Description -->
-                    {{ e.job_Description|safe|linebreaks }}
-
-                </div>
-
-            {% endfor %}
-
-        </div>
-        {% endif %}
-
-        <!-- EDUCATION SECTION -->
-        {% if resume.uni.exists %} {% comment %} Checks If Education List Exists {% endcomment %}
-        <div class='subsection' id='Education'>
-
-            <!-- Education Header -->
-            <h4 id='eduHeader'>Education</h4>
-
-            {% comment %} Loops And Displays Selected Objects {% endcomment %}
-            <!-- Education Body -->
-            {% for u in resume.uni.all %}
-
-                {% if u.uni_Image.url is not Null %}
-
-                    <img class='d-none d-md-block d-print-none' src='{{ u.uni_Image.url }}' alt='{{ u.uni_Name }}' /> <!-- University Logo -->
-                
-                {% endif %}
-
-                <div class='clearfix mt-3' id='eduUniHeader'>
-
-                    <!-- Degree Program Name -->
-                    <h5 class='mb-0'>{{ u.uni_Degree }}</h5>
-
-                    <!-- University Dates -->
-                    <i class='fad fa-calendar fa-fw'></i>&ensp;<span class='annotation'>{{ u.uni_Duration }}</span>&ensp;
-
-                    <!-- University Location -->
-                    <i class='fad fa-map-marker-alt fa-fw'></i>&ensp;<span class='annotation'>{{ u.uni_Location }}</span>
-
-                    <!-- University Name -->
-                    <h6 class='mb-0'>{{ u.uni_Name }}</h6>
-
-                </div>
-
-                <div class='my-3 clearfix' id='eduUniBody'>
-
-                    <!-- University Description -->
-                    {{ u.uni_Description|safe }}
-
-                </div>
-
-            {% endfor %}
-
-        </div>
-        {% endif %}
-
-        <!-- INDEPENDENT LEARNING SECTION -->
-        {% if resume.ind.exists %} {% comment %} Checks If Independent Courses List Exists {% endcomment %}
-        <div class='subsection' id='Independent'>
-
-            <!-- Independent Learning Header -->
-            <h4 id='indHeader'>Independent Learning</h4>
-
-            <!-- Independent Learning Body -->
-            <div class='row mt-3 mb-0' ind='indBody'>
-                
-                {% comment %} Loops And Displays Selected Objects {% endcomment %}
-                {% for x in resume.ind.all %}
-                <div class='col-4'>
-
-                    <dl class='row my-0'>
-                        
-                        <dt class='col-auto'>
-                        {% if x.course_Year is not None %}
-                            <!-- Year Received -->
-                            <span class='float-left d-inline-block mt-1' id='awardYear'>{{ x.course_Year|safe }}&emsp;</span>
-                        {% endif %}
-                        </dt>
-                        <dd class='col my-0'>
-                            <div class='row'>
-                                <span class='col-12'>
-                                    <!-- Award Name -->
-                                    <h6 class='red mt-1 mb-0'>{{ x.course_Name}}</h6>
-                                </span>
-                                <span class='col'>
-                                    <!-- Award Organization -->
-                                    <h6 class='text-muted mb-0'>{{ x.course_Organization }}</h6>
-                                    <!-- Award Description -->
-                                    <small>{{ x.course_Description }}</small>
-                                </span>
                             </div>
-                        </dd>
 
-                    </dl>
+                            <div class='my-3' id='eduUniBody'>
 
+                                <!-- University Description -->
+                                {{ u.uni_Description|safe }}
+
+                            </div>
+
+                        {% endfor %}
+
+                    {% endif %}
+                    
                 </div>
-                {% endfor %}
 
-            </div>
+                <hr />
 
-        </div>
-        {% endif %}
+                <!-- RELEVANT SKILLS SECTION -->
+                <div class='subsection' id='Skills'>
 
-        <!-- AWARDS SECTION -->
-        {% if resume.award.exists %} {% comment %} Checks If Awards List Exists {% endcomment %}
-        <div class='subsection' id='Awards'>
-
-            <!-- Awards Header -->
-            <h4 id='awardHeader'>Awards &amp; Accolades</h4>
-
-            <!-- Awards Body -->
-            <div class='row mt-3 mb-0' ind='awardBody'>
-                
-                {% comment %} Loops And Displays Selected Objects {% endcomment %}
-                {% for x in resume.award.all %}
-                <div class='col-12 col-lg-6'>
-
-                    <dl class='row my-0'>
+                    {% comment %} Checks If Any Skill Lists Exist {% endcomment %}
+                    {% if resume.cat.exists %} 
+                    
+                        <!-- Relevant Skills Header -->
+                        <h4>Relevant Skills</h4>
                         
-                        <dt class='col-auto'>
-                        {% if x.award_Year is not None %}
-                            <!-- Year Received -->
-                            <span class='float-left d-inline-block mt-1' id='awardYear'>{{ x.award_Year|safe }}&emsp;</span>
-                        {% endif %}
-                        </dt>
-                        <dd class='col my-0'>
-                            <div class='row'>
-                                <span class='col-12'>
-                                    <!-- Award Name -->
-                                    <h6 class='red mt-1 mb-0'>{{ x.award_Name}}</h6>
-                                </span>
-                                <span class='col'>
-                                    <!-- Award Organization -->
-                                    <h6 class='text-muted mb-0'>{{ x.award_Organization }}</h6>
-                                    <!-- Award Description -->
-                                    <small>{{ x.award_Description }}</small>
-                                </span>
-                            </div>
-                        </dd>
+                        <!-- Relevant Skills Body -->
+                        <div class='row mb-0' id='relBody'>
 
-                    </dl>
+                            <!-- Relevant Skills -->
+                            {% for c in resume.cat.all %} {% comment %} Check If Skill List Exists {% endcomment %}
+                            <div class='col-12' id='{{ c.category_Name }}'>
+
+                                <div class='my-2'>
+
+                                    <h6>{{ c.category_Name }}</h6>
+
+                                    {% comment %} Loops and Displays Selected Skill Names {% endcomment %}
+                                    {% for s in c.skill.all %}
+                                        <span class='text-muted badge'>{{ s.skill_Name }}</span>
+                                    {% endfor %}
+
+                                </div>
+                            
+                            </div>
+                            {% endfor %}
+
+                        </div>
+
+                    {% endif %}
 
                 </div>
-                {% endfor %}
+
+
+                <hr />
+
+                <!-- LINKS SECTION -->
+                <div class='subsection' id='Links'>
+
+                    {% comment %} Checks If Reference List Exists {% endcomment %}
+                    {% if resume.link.exists %}
+
+                        <!-- Links Header -->
+                        <h4 id='linkHeader'>Links</h4>
+
+                        <!-- Links Body -->
+                        <div class='row mt-3'>
+
+                            {% comment %} Loops And Displays Selected Objects {% endcomment %}
+                            {% for r in resume.link.all %}
+                            
+                                <div class='col-12' id='refBody'>  
+
+                                    <!-- Reference Link -->
+                                    <small><a href='{{ r.link_URL }}' target='_blank' id='resLink'>{{ r.link_Name|safe }}</a></small>
+
+                                </div>
+                            
+                            {% endfor%}
+
+                        </div>
+
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+            <div class='col-12 col-md-9' id='rightPanel'>
+
+                <!-- WORK EXPERIENCE SECTION -->
+                <div class='subsection' id='Employment'>
+
+                    {% comment %} Checks If Jobs Exist {% endcomment %}
+                    {% if resume.job.exists %}
+
+                        <!-- Work Experience Header -->    
+                        <h4 id='empHeader'>Work Experience</h4>
+
+                        {% comment %} Loops And Displays Selected Experience Objects {% endcomment %}
+                        {% for e in resume.job.all %}
+
+                            <!-- Work Experience Body -->
+                            <div id='empJobHeader'>
+
+                                <div class='row'>
+
+                                    <div class='col-auto'>
+
+                                        <!-- Job Title -->
+                                        <h5 class='mb-0 d-inline'>{{ e.job_Title }}</h5>                                 
+                                        <!-- Employer Name -->
+                                        <p class='mb-0 d-inline'>/&ensp;{{ e.job_Employer }}</p>
+
+                                    </div>
+
+                                    <div class='col-auto'>
+                                            
+                                        <!-- Job Dates -->
+                                        <small class='text-muted d-inline'><i class='fad fa-calendar fa-fw'></i>&ensp;{{ e.job_Duration }}</small>
+                                        <!-- Job Location -->
+                                        <small class='text-muted d-inline'><i class='fad fa-map-marker-alt fa-fw'></i>&ensp;{{ e.job_Location }}</small>
+                                        
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div id='empJobBody'>
+
+                                <!-- Job Description -->
+                                <p>{{ e.job_Description|safe|linebreaks }}</p>
+
+                            </div>
+
+                        {% endfor %}
+
+                    {% endif %}
+
+                </div>
 
             </div>
 
         </div>
-        {% endif %}
-
-        <!-- LINKS SECTION -->
-        {% if resume.link.exists %} {% comment %} Checks If Reference List Exists {% endcomment %}
-        <div class='sub' id='Links'>
-
-            <!-- Links Header -->
-            <h4 id='linkHeader'>Links</h4>
-
-            <!-- Links Body -->
-            <div class='row mt-3'>
-                
-                {% comment %} Loops And Displays Selected Objects {% endcomment %}
-                {% for r in resume.link.all %}
-                <div class='col' id='refBody'>
-
-                    <dl class='row mb-0 justify-content-end'>
-                        <dt class='col-3 col-xl-4'>
-                            <!-- Reference Title -->
-                            <h6 id='refTitle'>{{ r.link_Name }}:</h6>
-                        </dt>
-                        <dd class='mb-0 col-9 col-xl-8'>
-                            <!-- Reference Link -->
-                            <a href='{{ r.link_URL }}' target='_blank' id='resLink'>{{ r.link_URL }}</a>
-                        </dd>
-                        <dd class='mt-0 col-9 col-xl-8'>
-                            <div id='refDetails'>
-                                <!-- Reference Details -->
-                                <small>{{ r.link_Comment|safe }}</small>
-                            </div>
-                        </dd>
-                    </dl>
-
-                </div>
-                {% endfor%}
-
-            </div>
-
-        </div>
-        {% endif %}
 
     </section>
 

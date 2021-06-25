@@ -200,7 +200,6 @@ class job(models.Model):
             return True
         if self.job_Current == '0': 
             return False
-        
 
 # Education
 class university(models.Model):
@@ -267,7 +266,6 @@ class course(models.Model):
     course_Description = models.TextField('Description', help_text='i.e. general description, specialization, grade, series, etc', max_length=200, blank=True)
     course_App_Ref = models.ForeignKey('application', max_length=200, help_text='<strong>What application do you want to attach this to?</strong><br/>', related_name='ind',
                                                  on_delete=CASCADE, blank=True, null=True)
-
 
     class Meta:
         verbose_name = 'Course / Cert'

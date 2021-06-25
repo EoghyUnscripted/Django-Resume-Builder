@@ -34,6 +34,13 @@ def app(request, app_id):
 
     return render(request, 'resume/resume.html', context)
 
+def res(request, app_id): 
+
+    resume = get_object_or_404(application, pk=app_id)
+    context = {'resume':resume}
+
+    return render(request, 'resume/res2.html', context)
+
 def plain(request, app_id): 
 
     resume = get_object_or_404(application, pk=app_id)

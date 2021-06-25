@@ -10,16 +10,16 @@ class ProfilesAdmin(admin.ModelAdmin):
     list_filter = ['id']
     list_editable = ['profile_Name']
 
-@admin.register(objective)
-class ObjectivesAdmin(admin.ModelAdmin):
-    list_display = ('id', 'reference', 'abstract')
-    list_filter = ['id']
-
 @admin.register(contact)
 class ContactsAdmin(admin.ModelAdmin):
     list_display = ('id', 'reference', 'contact_Type', 'contact_Info')
     list_filter = ['id', 'contact_Type']
     list_editable = ['contact_Type', 'contact_Info']
+
+@admin.register(objective)
+class ObjectiveAdmin(admin.ModelAdmin):
+    list_display = ('id', 'reference', 'objective_Summary')
+    list_filter = ['id']
 
 # Skills
 @admin.register(skill)

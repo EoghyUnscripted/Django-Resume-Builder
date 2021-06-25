@@ -11,6 +11,7 @@ urlpatterns = [
     path('skill/<int:skill_id>/', views.skill_details, name='skill'),
     # Applications
     path('app/<int:app_id>/', views.app, name='app'),
+    path('res2/<int:app_id>/', views.res, name='res'),
     path('plain/<int:app_id>/', views.plain, name='plain'),
     path('cov/<int:app_id>/', views.cover, name='cover'),
 ]

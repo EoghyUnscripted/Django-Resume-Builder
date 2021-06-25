@@ -2,72 +2,47 @@
     
     /* Navigation Bar Settings On Screen */
     nav {
-        background-color: #333333;            /* Sets Background Color */
+        background-color: #9A825F;            /* Sets Background Color */
     }
 
     /* Body Settings On Screen */
     body {
-        font-family: 'Lato', sans-serif;            /*  Sets Font Family */
+        font-family: 'Ubuntu', sans-serif;            /*  Sets Font Family */
         font-size: 12pt;                            /* Sets Font Size */
     }
 
-    body body p, ul {
-        line-height: 1.8;               /* Sets Line Height */
-    }
-
     /* Header Settings On Screen */
-    h1 {
-        font-size: 4em;                                         /* Sets Font Size */
+    h1 {       
+        font-size: 3rem;                                
         text-transform: uppercase;                              /* Sets Text to Uppercase */
-        color: #5A0500;                                       /* Sets Font Color */
-        font-family: 'Montserrat', sans-serif;                  /* Sets Font Family */
+        color: #63213A;                                       /* Sets Font Color */
+        font-family: 'Hind Siliguri', sans-serif;                  /* Sets Font Family */
         font-weight: 500;                                       /* Sets Font Weight */
-        text-shadow: 3px 5px 6px rgb(0 0 0 / 0.4);              /* Sets Text Shadow */
-    }
-
-    h2 {
-        text-transform: uppercase;                  /* Sets Text to Uppercase */
-        color: #5A0500;                           /* Sets Font Color */
-        font-family: 'Vollkorn', serif;             /* Sets Font Family */
-        font-weight: 700;                           /* Sets Font Weight */
-    }
-
-    h3 {
-        text-transform: uppercase;                  /* Sets Text to Uppercase */
-        color: #5A0500;                           /* Sets Font Color */
-        font-family: 'Vollkorn', serif;             /* Sets Font Family */
-        font-weight: 700;                           /* Sets Font Weight */
     }
 
     h4 {
-        border-top: #FFFFFF;                                /* Sets Border Top Line Color */
-        border-bottom: #EEE;                                /* Sets Border Bottom Line Color */
-        border-left: #FFFFFF;                               /* Sets Border Left Line Color */
-        border-right: #FFFFFF;                              /* Sets Border Right Line Color */
-        border-style: solid;                                  /* Sets Border Style */
-        border-width: thin;                                   /* Sets Border Line Thickness */
-        text-transform: uppercase;                            /* Sets Text to Uppercase */
-        color: #5A0500;                                     /* Sets Font Color */
-        font-family: 'Vollkorn', serif;                       /* Sets Font Family */
-        font-weight: 700;                                     /* Sets Font Weight */
-        text-shadow: 3px 5px 6px rgb(0 0 0 / 0.2);            /* Sets Text Shadow */
+        color: #63213A;                                       /* Sets Font Color */
+        font-family: 'Hind Siliguri', sans-serif;            /* Sets Font Family */
+        text-transform: uppercase;
+        font-weight: 600;                                 /* Sets Font Weight */
     }
 
-    h5 {
-        color: #5A0500;                                 /* Sets Font Color */
-        font-family: 'Montserrat', sans-serif;            /* Sets Font Family */
+    h5 {             
+        font-family: 'Lato', sans-serif;            /* Sets Font Family */
+        text-transform: capitalize;
         font-weight: 600;                                 /* Sets Font Weight */
     }
 
     h6 {
         text-transform: capitalize;                       /* Sets Text to Capitalize */
-        font-family: 'Montserrat', sans-serif;            /* Sets Font Family */
-        font-weight: 600;                                 /* Sets Font Weight */
+        font-family: 'Hind Siliguri', sans-serif;            /* Sets Font Family */
+        font-weight: 500;                                 /* Sets Font Weight */
+        margin-bottom: -2px;
     }
 
     /* Link/URL Settings On Screen */
     a {
-        color: #5A0500;                   /* Sets Link Color */
+        color: #63213A;                   /* Sets Link Color */
         font-weight: 450;                   /* Body Settings On Screen */
     }
 
@@ -78,12 +53,12 @@
     }
 
     /* Footer Settings On Screen */
-    footer .inner {
-        text-align: center;             /* Centers Text */
+    footer {
+        display: none;             /* Centers Text */
     }
 
     svg {
-        filter: drop-shadow(3px 3px 2px rgb(0 0 0 / 0.4));              /* Adds Shadowing to SVG Icons FontAwesome */
+        color:#63213A;
     }
 
     /* Class Formatting On Screen */
@@ -93,10 +68,21 @@
         text-transform: uppercase;              /* Sets Uppercase Text */
     }
 
+    .badge {
+        font-size: 10px;
+        text-transform: capitalize;
+        font-weight: 500;
+        margin: -2px;
+    }
+
     .closing, 
     .signature {
         float: right;               /* Sets Float to Right */
         clear: right;               /* Sets Clear Fix on Right */
+    }
+
+    .closing h5 {
+        color: #63213A;
     }
 
     .signature {
@@ -106,94 +92,39 @@
         height: auto;               /* Sets Height of Image */
     }
 
-    .red {
-        color: #5A0500;
-    }
-
     .subsection {
-        margin-top: 20px;                   /* Sets Margin Top */
-        margin-bottom: 20px;                /* Sets Margin Bottom */
-    }
-
-    /* ID Formatting On Screen */
-    #Profile {
-        text-align: center;                 /* Centers Text */
-    }
-
-    #phonetic {
-        font-size: 1rem;                                /* Sets Font Size */
-        font-family: 'Vollkorn', serif;                 /* Sets Font Family */
-        font-weight: 500;                               /* Sets Font Weight */
-        margin: -10px;                                  /* Sets Margin */
-        color: #6c757d;                               /* Sets Text Color */
+        padding: 5px;
     }
 
     #contactText {
-        display: inline-flex;                   /* Displays Element */
+        text-align: right;
+        float: right;
+        position: relative;
+        display: block;                   /* Displays Element */
         font-weight: 500;                       /* Sets Font Weight */
-        padding-bottom: 15px;                   /* Sets Padding Bottom */
-        margin: -10px;                          /* Sets Margin */
     }
 
-    #contactText h6 {
-        text-transform: none;                   /* Overrides Prior Text-Transform */
-    }
-
-    #jobTitle {
-        border-bottom: #EEEEEE;              /* Sets Border Bottom Line Color */
-        border-top: #EEEEEE;                 /* Sets Border Top Line Color */
-        border-left: #FFFFFF;                /* Sets Border Left Line Color */
-        border-right: #FFFFFF;               /* Sets Border Right Line Color */
-        border-style: solid;                   /* Sets Border Style */
-        border-width: thin;                    /* Sets Border Line Thickness */
-        margin-top: 10px;                      /* Sets Margin Top */
-        padding-top: 10px;                     /* Sets Padding Top */
-        padding-bottom: 10px;                  /* Sets Padding Bottom */
-        text-align: center;                    /* Centers Text */
+    #covHeader h2 {
+        color: #63213A;
     }
 
     #objBody {
-        margin-top: 10px;                   /* Sets Margin Top */
-        margin-bottom: 15px;                /* Sets Margin Bottom */
         text-align: justify;                /* Justifies Text */
     }
 
-    #empJobBody,
-    #prevJobBody {
-        text-align: justify;                /* Justifies Text */
-        width: 100%;                        /* Sets Width */
-        padding-right: 15px;                /* Sets Padding Right */
-        padding-left: 15px;                 /* Sets Padding Left */
-        margin-right: auto;                 /* Sets Margin Right */
-        margin-left: auto;                  /* Sets Margin Left */
+    #empJobBody {
+        border-left: #CCC;
+        border-width: 0 0 0 1px;
+        border-style: solid;
+        padding-left: 15px;
     }
 
-    #empJobBody,
-    #prevJobBody {
-        text-align: justify;            /* Justifies Text */
+    #empJobBody svg {
+        margin-left: -25px;
     }
 
-    #Employment img {
-        max-width: 200px;               /* Sets Max Width of Image */
-        float: right;                   /* Sets Image to Float Right */
-    }
-
-    #Education img {
-        max-width: 30%;                 /* Sets Max Width of Image */ 
-        float: right;                   /* Sets Image to Float Right */
-    }
-
-    #eduUniBody {
-        text-align: justify;                /* Justifies Text */
-        width: 100%;                        /* Sets Width */
-        padding-right: 15px;                /* Sets Padding Right */
-        padding-left: 15px;                 /* Sets Padding Left */
-        margin-right: auto;                 /* Sets Margin Right */
-        margin-left: auto;                  /* Sets Margin Left */
-    }
-
-    #indIcons {
-        color: #6c757d;                 /* Sets Font Color */
+    #leftPanel {
+        margin-bottom: 30px;
     }
 
 }
@@ -204,99 +135,75 @@
         size: auto;                  /* Sets Page Dimensions For Print */
     }
 
-    /* Body Settings For Print */
     body {
-        font-family: 'Lato', sans-serif;                /*  Sets Font Family */
-        font-size: 12pt;                                /* Sets Font Size */
+        font-family: 'Ubuntu', sans-serif;            /*  Sets Font Family */
+        font-size: 14pt;                            /* Sets Font Size */
     }
 
     body body p, ul {
         line-height: 1.8;               /* Sets Line Height */
     }
 
-    /* Header Settings For Print */
-    h1 {
-        font-size: 3rem;                                    /* Sets Font Size */
-        text-transform: uppercase;                          /* Sets Text to Uppercase */
-        color: #5A0500;                                   /* Sets Font Color */
-        font-family: 'Montserrat', sans-serif;              /* Sets Font Family */
-        font-weight: 500;                                   /* Sets Font Weight */
-    }
-
-    h2 {
-        text-transform: uppercase;                       /* Sets Text to Uppercase */
-        color: #5A0500;                                /* Sets Font Color */
-        font-family: 'Vollkorn', serif;                  /* Sets Font Family */
-        font-weight: 700;                                /* Sets Font Weight */
-    }
-
-    h3 {
-        text-transform: uppercase;                    /* Sets Text to Uppercase */
-        color: #5A0500;                             /* Sets Font Color */
-        font-family: 'Vollkorn', serif;               /* Sets Font Family */
-        font-weight: 700;                             /* Sets Font Weight */
+    /* Header Settings On Screen */
+    h1 {       
+        font-size: 3rem;                                
+        text-transform: uppercase;                              /* Sets Text to Uppercase */
+        color: #63213A;                                       /* Sets Font Color */
+        font-family: 'Hind Siliguri', sans-serif;                  /* Sets Font Family */
+        font-weight: 500;                                       /* Sets Font Weight */
     }
 
     h4 {
-        border-top: #FFFFFF;                           /* Sets Border Top Line Color */
-        border-bottom: #EEE;                           /* Sets Border Bottom Line Color */
-        border-left: #FFFFFF;                          /* Sets Border Left Line Color */
-        border-right: #FFFFFF;                         /* Sets Border Right Line Color */
-        border-style: solid;                             /* Sets Border Style */
-        border-width: thin;                              /* Sets Border Line Thickness */
-        line-height: 2em;                                /* Sets Text Line Height */
-        text-transform: uppercase;                       /* Sets Text to Uppercase */
-        color: #5A0500;                                /* Sets Font Color */
-        font-family: 'Vollkorn', serif;                  /* Sets Font Family */
-        font-weight: 700;                                /* Sets Font Weight */
+        color: #63213A;                                       /* Sets Font Color */
+        font-family: 'Hind Siliguri', sans-serif;            /* Sets Font Family */
+        text-transform: uppercase;
+        font-weight: 500;                                 /* Sets Font Weight */
     }
 
-    h5 {
-        color: #5A0500;                                    /* Sets Font Color */
-        font-family: 'Montserrat', sans-serif;               /* Sets Font Family */
-        font-weight: 600;                                    /* Sets Font Weight */
+    h5 {             
+        font-family: 'Lato', sans-serif;            /* Sets Font Family */
+        text-transform: capitalize;
+        font-weight: 600;                                 /* Sets Font Weight */
     }
 
     h6 {
-        text-transform: capitalize;                          /* Sets Text to Capitalize */
-        font-family: 'Montserrat', sans-serif;               /* Sets Font Family */
-        font-weight: 600;                                    /* Sets Font Weight */
+        text-transform: capitalize;                       /* Sets Text to Capitalize */
+        font-family: 'Hind Siliguri', sans-serif;            /* Sets Font Family */
+        font-weight: 500;                                 /* Sets Font Weight */
     }
 
-    /* Link/URL Settings For Print */
-    a,
-    a:link {
-        color: #5A0500;                   /* Sets Link Color */
+    /* Link/URL Settings On Screen */
+    a {
+        color: #63213A;                   /* Sets Link Color */
+        font-weight: 450;                   /* Body Settings On Screen */
+    }
+
+    a:hover {
+        color: #6c757d;                   /* Sets Link Color */
         font-weight: 450;                   /* Body Settings On Screen */
         text-decoration: none;              /* Removes Underline */
     }
 
-    /* Image Settings For Print */
-    img {
-        display: none;             /* Hides Images */
+    svg {
+        color:#63213A;
     }
 
     footer {
-        display: none;             /* Hides Element */
+        display: none;
     }
 
-    svg {
-        filter: drop-shadow(3px 3px 2px rgb(0 0 0 / 0.4));                    /* Sets Shadowing on SVG Icons FontAwesome */
-    }
-    
-    /* Class Settings For Print */
+    /* Class Formatting On Screen */
     .annotation {
-        font-size: 12pt;                        /* Sets Font Size */
+        font-size: 14pt;                        /* Sets font size */
         color: #6c757d;                       /* Sets Color */
         text-transform: uppercase;              /* Sets Uppercase Text */
     }
-    
-    .divider {
-        border-color: #464646;                /* Sets Line Color of Border */
-    }
 
-    .contacts h6 {
-        text-transform: inherit;                /* Removes Prior Text-Transform Settings  */
+    .badge {
+        font-size: 16px;
+        text-transform: capitalize;
+        font-weight: 500;
+        border-style: none;
     }
 
     .closing, 
@@ -305,84 +212,52 @@
         clear: right;               /* Sets Clear Fix on Right */
     }
 
+    .closing h5 {
+        color: #63213A;
+    }
+
     .signature {
-        display: inline-flex;               /* Sets Display Inline With Elements */
-        opacity: 80%;                       /* Sets Opacity of Image */
-        z-index: -1;                        /* Sets Index To Back */
-        width: 200px;                       /* Sets Width of Image */
-        height: auto;                       /* Sets Height of Image */
+        opacity: 80%;               /* Sets Opacity of Image */
+        z-index: -1;                /* Sets Index To Back */
+        width: 200px;               /* Sets Width of Image */
+        height: auto;               /* Sets Height of Image */
     }
 
-    .red {
-        color: #5A0500;
-    }
-
-    .subsection {
-        margin-top: 20px;                  /* Sets Margin Top */
-        margin-bottom: 20px;               /* Sets Margin Bottom */
-    }
-
-    /* ID Settings For Print */
-    #Profile {
-        text-align: center;                 /* Centers Text */
-    }
-    
-    #phonetic {
-        font-size: 1rem;                              /* Sets Font Size */
-        font-family: 'Vollkorn', serif;               /* Sets Font Family */
-        font-weight: 500;                             /* Sets Font Weight */
-        margin: -10px;                                /* Sets Margin */
-        color: #6c757d;                             /* Sets Color */
-    }
-    
     #contactText {
-        display: inline-flex;               /* Displays Inline With Other Elements */
-        font-weight: 500;                   /* Sets Font Weight */
-        padding-bottom: 15px;               /* Sets Padding Bottom */
+        text-align: right;
+        float: right;
+        position: relative;
+        display: block;                   /* Displays Element */
+        font-weight: 500;                       /* Sets Font Weight */
     }
 
-    #contactText h6 {
-        text-transform: none;               /* Overrides Prior Text-Transform */
+    #covHeader h2 {
+        color: #63213A;
     }
 
     #jobTitle {
-        border-bottom: #EEEEEE;               /* Sets Border Bottom Line Color */
-        border-top: #EEEEEE;                  /* Sets Border Top Line Color */
-        border-left: #FFFFFF;                 /* Sets Border Left Line Color */
-        border-right: #FFFFFF;                /* Sets Border Right Line Color */
-        border-style: solid;                    /* Sets Border Style */
-        border-width: thin;                     /* Sets Border Line Thickness */
-        padding-top: 10px;                      /* Sets Padding Top */
-        padding-bottom: 10px;                   /* Sets Padding Bottom */
-        text-align: center;                     /* Centers Text */
+        margin-top: 10px;                      /* Sets Margin Top */
+        padding-top: 10px;                     /* Sets Padding Top */
     }
 
     #objBody {
-        margin-top: 10px;               /* Sets Margin Top */
-        margin-bottom: 15px;            /* Sets Margin Bottom */
-        text-align: justify;            /* Justifies Text */
+        margin-top: 10px;                   /* Sets Margin Top */
+        text-align: justify;                /* Justifies Text */
     }
 
-    #empJobHeader,
-    #prevJobHeader {
-        text-align: center;             /* Centers Text */
+    #empJobBody {
+        border-left: #CCC;
+        border-width: 0 0 0 1px;
+        border-style: solid;
+        padding-left: 15px;
     }
 
-    #empJobBody,
-    #prevJobBody {
-        text-align: justify;            /* Justifies Text */
+    #empJobBody svg {
+        margin-left: -27px;
     }
 
-    #eduUniHeader {
-        text-align: center;             /* Centers Text */
-    }
-
-    #indIcons {
-        color: #6c757d;              /* Sets Icon Color */
-    }
-
-    #refDetails {
-        display: block;                /* Displays Element */
+    #leftPanel {
+        margin-bottom: 30px;
     }
 
 }
