@@ -1,8 +1,12 @@
-# The Hulbert Files
-# Django-Resume-Builder
-# Author: Eoghan Hulbert
-# Version: 1.0
-# Released: June 17, 2021
+# Eoghy Unscripted
+
+## Django-Resume-Builder
+
+## Author: Eoghan Hulbert
+
+## Version: 1.0
+
+## Released: June 17, 2021
 
 Thank you for checking out my resume builder with Django and Python.
 This project is still active and in development, so some files make be blank or incomplete.
@@ -13,7 +17,7 @@ v1.0
 The current version of this app has only 1 resume and cover letter layout but more are to be added
 once I develop a front-end GUI for users.
 
-This GUI will allow users to select and change the designs and colors of their resumes. 
+This GUI will allow users to select and change the designs and colors of their resumes.
 These will be pre-set styles and will not be 100% customizable.
 
 As of now, users will need to enter data in via manual coding or using the django-admin interface.
@@ -57,7 +61,7 @@ To use this application, you will need to take steps to setting up your environm
 
 8) Once all steps have been completed, enter in the command: "python manage.py runserver"
    This will initialize the server and host the project on localhost:8000 by default
-   You can also designate the address by including it at the end of the command: 
+   You can also designate the address by including it at the end of the command:
         "python manage.py runserver yourip:8000"
     When designating this type of command, you allow other devices to access the application,
     such as your mobile device and other computers on your network by entering in the address:
@@ -72,7 +76,7 @@ object, which is the "Application".
 As I was using this app to create new resumes and cover letters for each application I submitted for
 jobs, I needed to keep them static so that any updates made, would only appear on a specific application.
 
-This can become an issue the more applications and references that are in the app, and is something I 
+This can become an issue the more applications and references that are in the app, and is something I
 am proactively working on resolving to avoid confusion and stress when using the application for it's
 primary purpose.
 
@@ -96,12 +100,12 @@ primary purpose.
 6) Optional: Add the skills related directly to the job role you are applying for -- if you are a developer
              you can add your technical skills. Otherwise, you can leave emppty or continue to list the rest
              of your skills related to the job role
-    
+
     NOTE: If you do not link the skills to a set category, they will not display on the resume
           You can set a category with the title of "General" or add a fontawesome icon in it's place
 
 7) Optional: Add employment to your resume -- This section is optional, but should include some form of
-             activity, such as professional employment, volunteer work, work study, self-employment, 
+             activity, such as professional employment, volunteer work, work study, self-employment,
              internships, etc
              Be sure to check off whether or not it is a current role for display purposes
 
@@ -124,19 +128,37 @@ primary purpose.
 
 Thank you, again for checking out my work. If you have questions, concerns, or suggestions, please reach out to me!
 
-v2.0
+### Notes
 
-Version 2.0 is coming soon and will include additional elements such as a new resume format, possible color 
-options for text design, and potentially a more modern design option.
+This app requires a separate `local_settings.py` file which holds the secret key, debug boolean, allowed hosts and database settings. I choose this setup to keep that data hidden when hosting on a server to the public to avoid issues or security threats.
 
-With this version I plan to attempt to create a "Resume" object model with a Title field so that users
-can use this as the reference object for the resume elements (Name, profile, employement, etc). I will then
-add both the resume and cover letter references to the "Application" object.
+#### local_settings.py File Sample
 
-This change will help to reduce confusion in the hierarchy and allow me to develop a front-end that will
-automatically link the elements to their respective resume and cover letters without user input. This may
-not become a viable option, depending on how the GUI needs to function for the users.
+``` Python
+SECRET_KEY = '8Db[e(c64){}=l*4%3wzsxcl_$$l9e0b!gtf!%g9$7)fmh5y=w7&8'    # Never share your secret key
+DEBUG = True/False  # Debug should be set False when hosting live, True when developing/testing
+ALLOWED_HOSTS = ['site1.local', 'site2.local', 'localhost', '10.0.0.188']   # Include your main URL when hosting live
 
-Ideally, the GUI will make the steps above more self-explanatory to users so that the general,
-non-technical individual can figure out how to build their resume and cover letters without needing to go 
-through the django-admin portal.
+# This is a sample when using PostGreSql
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'myDB',
+        'USER': 'myUserName',
+        'PASSWORD': 'myPassword1',
+        'HOST': 'localhost',
+        'PORT':'5432',
+    }
+}
+```
+
+In the `settings.py` file, I have scripted code that will import this data from the `local_settings.py` file so that it can remain separate and hidden from malicious actors. See below.
+
+``` Python
+
+try:
+    from .local_settings import *
+except ImportError:
+    pass
+
+```
